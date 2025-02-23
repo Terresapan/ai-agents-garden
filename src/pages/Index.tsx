@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import { Linkedin, Github, Youtube } from "lucide-react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
@@ -16,9 +16,17 @@ import { ButtonColorful } from "@/components/ui/button-colorful";
 import { Link } from "react-router-dom";
 import { SharedHeader } from "@/components/ui/shared-header";
 import { SharedFooter } from "@/components/ui/shared-footer";
+import { supabase } from "@/integrations/supabase/client";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
   const location = useLocation();
+  const { toast } = useToast();
+  const [formData, setFormData] = useState({
+    name: '',
+    email: ''
+  });
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   useEffect(() => {
     if (location.state?.scrollToIntro) {
@@ -30,6 +38,49 @@ const Index = () => {
       window.history.replaceState({}, document.title);
     }
   }, [location]);
+
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setIsSubmitting(true);
+
+    try {
+      const { error } = await supabase
+        .from('contacts')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email
+          }
+        ]);
+
+      if (error) throw error;
+
+      toast({
+        title: "Success!",
+        description: "Thank you for your submission!",
+      });
+
+      // Reset form
+      setFormData({ name: '', email: '' });
+    } catch (error) {
+      console.error('Error:', error);
+      toast({
+        title: "Error",
+        description: "Something went wrong. Please try again.",
+        variant: "destructive"
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return <div className="min-h-screen flex flex-col">
       <SharedHeader />
@@ -190,7 +241,7 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Globe and Contact Form Section */}
+        {/* Contact Form Section */}
         <div className="w-full py-24 bg-background">
           <div className="max-w-7xl mx-auto px-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
@@ -205,17 +256,38 @@ const Index = () => {
                               transition-all duration-300 hover:shadow-[0_0_20px_rgba(217,70,239,0.5),0_0_40px_rgba(30,174,219,0.3)] 
                               hover:border-fuchsia-500/50">
                   <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center">
-                    Subscribe to Newsletters
+                    Get in Touch
                   </h2>
-                  <form className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <Input type="text" placeholder="Name" className="bg-background/50 border-white/10" />
+                      <Input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        value={formData.name}
+                        onChange={handleInputChange}
+                        required
+                        className="bg-background/50 border-white/10"
+                      />
                     </div>
                     <div>
-                      <Input type="email" placeholder="Email" className="bg-background/50 border-white/10" />
+                      <Input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        value={formData.email}
+                        onChange={handleInputChange}
+                        required
+                        className="bg-background/50 border-white/10"
+                      />
                     </div>
                     <div>
-                      <ButtonColorful type="submit" label="Submit" className="w-full" />
+                      <ButtonColorful
+                        type="submit"
+                        disabled={isSubmitting}
+                        label={isSubmitting ? "Submitting..." : "Submit"}
+                        className="w-full"
+                      />
                     </div>
                   </form>
                 </div>
@@ -223,6 +295,9 @@ const Index = () => {
             </div>
           </div>
         </div>
+
+        {/* Globe and Contact Form Section */}
+        
       </div>
 
       <SharedFooter />
