@@ -62,6 +62,13 @@ const agents = [
     category: "Decision Making",
     imagePath: "/lovable-uploads/b5a40246-1a1f-413e-a3e7-a5f46910aabc.png",
     link: "https://debating-arena.streamlit.app/"
+  },
+  {
+    title: "LinkedIn Post Master",
+    description: "Create a Professional LinkedIn Post Using the Provided URL",
+    category: "Content Creation",
+    imagePath: "/lovable-uploads/3509990a-996f-4e46-a672-02033d1a47d8.png",
+    link: "https://linkedinpostmaster.streamlit.app/"
   }
 ];
 
