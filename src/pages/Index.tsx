@@ -198,8 +198,17 @@ const Index = () => {
               </div>
 
               {/* Contact form on the right */}
-              <div className="group relative bg-black/[0.96] rounded-lg p-8 border border-white/10 overflow-hidden">
-                <div className="relative z-10">
+              <div className="relative group">
+                <GlowingEffect 
+                  disabled={false} 
+                  glow={true} 
+                  spread={60} 
+                  blur={10} 
+                  borderWidth={2}
+                  proximity={100}
+                  inactiveZone={0.4}
+                />
+                <div className="relative z-10 bg-black/[0.96] rounded-lg p-8 border border-white/10">
                   <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
                     Get in Touch
                   </h2>
@@ -229,15 +238,6 @@ const Index = () => {
                       </button>
                     </div>
                   </form>
-                </div>
-                <div className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
-                  <GlowingEffect 
-                    disabled={false} 
-                    glow={true} 
-                    spread={30} 
-                    blur={20}
-                    borderWidth={2}
-                  />
                 </div>
               </div>
             </div>
