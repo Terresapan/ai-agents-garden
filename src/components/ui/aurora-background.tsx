@@ -53,4 +53,3 @@ export const AuroraBackground = ({
     </main>
   );
 };
-
