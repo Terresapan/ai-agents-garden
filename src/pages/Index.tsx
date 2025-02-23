@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
@@ -50,13 +51,13 @@ const Index = () => {
               />
             </div>
 
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold dark:text-white mb-6">
-              Welcome to Your Next{" "}
-              <span className="text-fuchsia-500">Amazing</span>{" "}
-              Project
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Welcome to Your Next </span>
+              <span className="text-fuchsia-500">Amazing</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"> Project</span>
             </h1>
             
-            <p className="text-lg md:text-xl dark:text-neutral-200 max-w-2xl mx-auto mb-8">
+            <p className="text-lg md:text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 max-w-2xl mx-auto mb-8">
               Start building something incredible with modern tools and stunning design.
               Your journey to creating remarkable applications begins here.
             </p>
