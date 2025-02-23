@@ -17,43 +17,43 @@ const agents = [
     title: "CalendlySocial",
     description: "Streamline your social media calendar with AI-driven scheduling",
     category: "Content Creation",
-    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
+    imagePath: "/lovable-uploads/c9f4c6a5-97e2-4104-8e77-6c195914e5c4.png"
   },
   {
     title: "Mr. Blogger",
     description: "Craft engaging blog posts effortlessly with AI assistance",
     category: "Content Creation",
-    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
+    imagePath: "/lovable-uploads/e287c9ec-58c4-4cc9-b80a-48c70c9814cf.png"
   },
   {
     title: "Copywriter",
     description: "Auto-generate compelling social media posts with ease",
     category: "Content Creation",
-    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
+    imagePath: "/lovable-uploads/1edce8c4-f9c2-4226-b20a-e58c8ea3da40.png"
   },
   {
     title: "Content Idea Seeker",
     description: "Discover viral content ideas with AI-powered insights",
     category: "Content Creation",
-    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
+    imagePath: "/lovable-uploads/3a05dbb9-2969-4937-a4f4-c122dc1b2ede.png"
   },
   {
     title: "Positioning Master",
     description: "Optimize and validate your marketing positioning with AI",
     category: "Marketing Strategy",
-    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
+    imagePath: "/lovable-uploads/2bca7ee5-3c0c-4c81-a5e2-fac2a736548b.png"
   },
   {
     title: "Six Thinking Hats",
     description: "Enhance decision-making with a structured approach",
     category: "Decision Making",
-    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
+    imagePath: "/lovable-uploads/1b3826d5-2512-4379-a37a-797d1af325a9.png"
   },
   {
     title: "Debating Arena",
     description: "Sharpen your ideas with AI-powered debates",
     category: "Decision Making",
-    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
+    imagePath: "/lovable-uploads/b5a40246-1a1f-413e-a3e7-a5f46910aabc.png"
   }
 ];
 
