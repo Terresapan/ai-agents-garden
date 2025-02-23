@@ -1,6 +1,7 @@
 
 import { Link, useNavigate } from "react-router-dom";
 import { Button } from "./button";
+import { StarBorder } from "./star-border";
 
 export const SharedHeader = () => {
   const navigate = useNavigate();
@@ -23,9 +24,14 @@ export const SharedHeader = () => {
           Artful Geek
         </Link>
         <div className="flex items-center gap-6">
-          <Link to="/agent-garden" className="hover:text-fuchsia-500 transition-colors">
+          <StarBorder 
+            as={Link} 
+            to="/agent-garden"
+            color="hsl(var(--fuchsia-500))"
+            className="hover:opacity-80 transition-opacity"
+          >
             Agent Garden
-          </Link>
+          </StarBorder>
           <Button 
             variant="outline"
             className="border-fuchsia-500 text-fuchsia-500 hover:bg-fuchsia-500/10"
