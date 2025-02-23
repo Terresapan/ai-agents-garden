@@ -1,6 +1,7 @@
 
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
+import { RainbowButton } from "@/components/ui/rainbow-button";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
 
@@ -28,13 +29,9 @@ const Index = () => {
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <Button 
-            size="lg"
-            className="bg-blue-500 hover:bg-blue-600 text-white rounded-full px-8"
-          >
-            Get Started
-            <ArrowRight className="ml-2 h-4 w-4" />
-          </Button>
+          <RainbowButton>
+            Get Started <ArrowRight className="ml-2 h-4 w-4" />
+          </RainbowButton>
           
           <Button 
             variant="outline"
