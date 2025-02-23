@@ -29,7 +29,7 @@ const Index = () => {
           <h2 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">Artful Geek</h2>
           <div className="flex gap-4">
             <StarBorder>
-              <span className="hover:text-fuchsia-500 transition-colors">Agent Garden</span>
+              <a href="/agent-garden" className="hover:text-fuchsia-500 transition-colors">Agent Garden</a>
             </StarBorder>
             <StarBorder onClick={scrollToIntro} className="cursor-pointer">
               <span className="hover:text-fuchsia-500 transition-colors">
