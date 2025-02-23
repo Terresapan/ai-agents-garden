@@ -77,11 +77,6 @@ const Index = () => {
 
       {/* Main Content */}
       <div className="flex-grow bg-background">
-        {/* Globe Demo Section */}
-        <div className="max-w-7xl mx-auto px-4 py-24">
-          <GlobeDemo />
-        </div>
-
         {/* 3D Interactive Section */}
         <div className="max-w-7xl mx-auto px-4 py-24">
           <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
@@ -190,6 +185,13 @@ const Index = () => {
               </div>
             </div>
           </Card>
+        </div>
+
+        {/* Globe Section */}
+        <div className="w-full flex justify-center items-center py-24 bg-background">
+          <div className="max-w-4xl mx-auto w-full">
+            <GlobeDemo />
+          </div>
         </div>
       </div>
 
