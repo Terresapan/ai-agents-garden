@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
@@ -199,7 +198,7 @@ const Index = () => {
               </div>
 
               {/* Contact form on the right */}
-              <div className="bg-black/[0.96] rounded-lg p-8 border border-white/10">
+              <div className="bg-black/[0.96] rounded-lg p-8 border border-white/10 transition-all duration-300 hover:bg-gradient-to-r hover:from-fuchsia-500/10 hover:via-blue-500/10 hover:to-fuchsia-500/10 hover:shadow-[0_0_30px_-5px_rgba(192,132,252,0.5)]">
                 <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
                   Get in Touch
                 </h2>
@@ -221,9 +220,11 @@ const Index = () => {
                   <div>
                     <button
                       type="submit"
-                      className="w-full px-4 py-2 text-lg font-bold rounded bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 border border-white/10 hover:bg-white/5 transition-colors"
+                      className="group w-full px-4 py-2 text-lg font-semibold rounded transition-all duration-300 bg-black/50 border border-white/10 hover:bg-white/5"
                     >
-                      Submit <ArrowRight className="ml-2 h-4 w-4 inline" />
+                      <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                        Submit <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                      </span>
                     </button>
                   </div>
                 </form>
