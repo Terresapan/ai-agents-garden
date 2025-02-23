@@ -2,6 +2,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AgentCard } from "@/components/ui/agent-card";
+import { cn } from "@/lib/utils";
 
 const categories = ["All", "Content Creation", "Marketing Strategy", "Data Analytics", "Decision Making"];
 
