@@ -17,7 +17,8 @@ const AgentCard = ({ title, description, category, imagePath, link, className }:
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "relative rounded-xl overflow-hidden block",
+        "group relative rounded-xl overflow-hidden block",
+        "transition-all duration-300 hover:scale-[1.01]",
         className
       )}
     >
@@ -26,7 +27,7 @@ const AgentCard = ({ title, description, category, imagePath, link, className }:
         <img 
           src={imagePath} 
           alt={title} 
-          className="w-full h-full object-cover opacity-75"
+          className="w-full h-full object-cover opacity-75 transition-opacity duration-300 group-hover:opacity-80"
         />
       </div>
       
