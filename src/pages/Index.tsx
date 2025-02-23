@@ -11,6 +11,7 @@ import { GlobeDemo } from "@/components/ui/code.demo";
 import { Input } from "@/components/ui/input";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { ButtonColorful } from "@/components/ui/button-colorful";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const scrollToIntro = () => {
@@ -21,15 +22,20 @@ const Index = () => {
       });
     }
   };
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-          <h2 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">Artful Geek</h2>
+          <Link to="/" className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">
+            Artful Geek
+          </Link>
           <div className="flex gap-4">
             <StarBorder>
-              <a href="/agent-garden" className="hover:text-fuchsia-500 transition-colors">Agent Garden</a>
+              <Link to="/agent-garden" className="hover:text-fuchsia-500 transition-colors">
+                Agent Garden
+              </Link>
             </StarBorder>
             <StarBorder onClick={scrollToIntro} className="cursor-pointer">
               <span className="hover:text-fuchsia-500 transition-colors">
@@ -68,8 +74,8 @@ const Index = () => {
               Your journey to creating remarkable applications begins here.
             </p>
 
-            <RainbowButton>
-              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            <RainbowButton onClick={() => window.location.href = '/agent-garden'}>
+              Explore Agent Garden <ArrowRight className="ml-2 h-4 w-4" />
             </RainbowButton>
           </motion.div>
         </div>
