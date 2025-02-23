@@ -17,8 +17,7 @@ const AgentCard = ({ title, description, category, imagePath, link, className }:
       target="_blank"
       rel="noopener noreferrer"
       className={cn(
-        "group relative rounded-xl overflow-hidden block",
-        "transition-all duration-300 hover:scale-[1.01]", // Reduced scale from 1.02 to 1.01
+        "relative rounded-xl overflow-hidden block",
         className
       )}
     >
@@ -27,7 +26,7 @@ const AgentCard = ({ title, description, category, imagePath, link, className }:
         <img 
           src={imagePath} 
           alt={title} 
-          className="w-full h-full object-cover opacity-75 transition-opacity duration-300 group-hover:opacity-80" // Adjusted base opacity from 70 to 75
+          className="w-full h-full object-cover opacity-75"
         />
       </div>
       
@@ -37,7 +36,7 @@ const AgentCard = ({ title, description, category, imagePath, link, className }:
           <span className="inline-block px-3 py-1 rounded-full text-xs font-medium bg-black/50 text-white">
             {category}
           </span>
-          <h3 className="text-xl font-bold text-white">{description}</h3>
+          <h3 className="text-xl font-bold text-white">{title}</h3>
           <p className="text-sm text-white/90">{description}</p>
         </div>
       </div>
