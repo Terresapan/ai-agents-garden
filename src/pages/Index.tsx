@@ -8,6 +8,7 @@ import { Spotlight } from "@/components/ui/spotlight";
 import { GlareCard } from "@/components/ui/glare-card";
 import { ArrowRight } from "lucide-react";
 import { GlobeDemo } from "@/components/ui/code.demo";
+import { Input } from "@/components/ui/input";
 
 const Index = () => {
   const scrollToIntro = () => {
@@ -187,10 +188,43 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Globe Section */}
-        <div className="w-full flex justify-center items-center py-24 bg-background">
-          <div className="max-w-4xl mx-auto w-full">
-            <GlobeDemo />
+        {/* Globe and Contact Form Section */}
+        <div className="w-full py-24 bg-background">
+          <div className="max-w-7xl mx-auto px-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              {/* Globe on the left */}
+              <div>
+                <GlobeDemo />
+              </div>
+
+              {/* Contact form on the right */}
+              <div className="bg-black/[0.96] rounded-lg p-8 border border-white/10">
+                <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                  Get in Touch
+                </h2>
+                <form className="space-y-6">
+                  <div>
+                    <Input
+                      type="text"
+                      placeholder="Name"
+                      className="bg-background/50 border-white/10"
+                    />
+                  </div>
+                  <div>
+                    <Input
+                      type="email"
+                      placeholder="Email"
+                      className="bg-background/50 border-white/10"
+                    />
+                  </div>
+                  <div>
+                    <RainbowButton type="submit" className="w-full">
+                      Submit <ArrowRight className="ml-2 h-4 w-4" />
+                    </RainbowButton>
+                  </div>
+                </form>
+              </div>
+            </div>
           </div>
         </div>
       </div>
