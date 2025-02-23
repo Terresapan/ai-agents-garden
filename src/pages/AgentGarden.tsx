@@ -11,49 +11,49 @@ const agents = [
     title: "Data Whisperer",
     description: "Unlock data insights with AI-powered analysis",
     category: "Data Analytics",
-    imagePath: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80"
+    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
   },
   {
     title: "CalendlySocial",
     description: "Streamline your social media calendar with AI-driven scheduling",
     category: "Content Creation",
-    imagePath: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&q=80"
+    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
   },
   {
     title: "Mr. Blogger",
     description: "Craft engaging blog posts effortlessly with AI assistance",
     category: "Content Creation",
-    imagePath: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80"
+    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
   },
   {
     title: "Copywriter",
     description: "Auto-generate compelling social media posts with ease",
     category: "Content Creation",
-    imagePath: "https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?auto=format&fit=crop&q=80"
+    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
   },
   {
     title: "Content Idea Seeker",
     description: "Discover viral content ideas with AI-powered insights",
     category: "Content Creation",
-    imagePath: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80"
+    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
   },
   {
     title: "Positioning Master",
     description: "Optimize and validate your marketing positioning with AI",
     category: "Marketing Strategy",
-    imagePath: "https://images.unsplash.com/photo-1581092795360-fd1ca04f0952?auto=format&fit=crop&q=80"
+    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
   },
   {
     title: "Six Thinking Hats",
     description: "Enhance decision-making with a structured approach",
     category: "Decision Making",
-    imagePath: "https://images.unsplash.com/photo-1483058712412-4245e9b90334?auto=format&fit=crop&q=80"
+    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
   },
   {
     title: "Debating Arena",
     description: "Sharpen your ideas with AI-powered debates",
     category: "Decision Making",
-    imagePath: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&q=80"
+    imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
   }
 ];
 
@@ -113,7 +113,7 @@ const AgentGarden = () => {
 
           {/* Second row - 1/3 + 1/3 + 1/3 layout */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {filteredAgents.slice(2, 5).map((agent) => (
+            {filteredAgents.slice(2).map((agent) => (
               <AgentCard
                 key={agent.title}
                 {...agent}
