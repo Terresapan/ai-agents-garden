@@ -28,7 +28,8 @@ export const SharedHeader = () => {
             as={Link} 
             to="/agent-garden"
             color="hsl(var(--fuchsia-500))"
-            className="hover:opacity-80 transition-opacity"
+            speed="4s"
+            className="hover:opacity-90 transition-all duration-300"
           >
             Agent Garden
           </StarBorder>

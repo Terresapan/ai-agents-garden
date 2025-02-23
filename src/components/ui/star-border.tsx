@@ -24,7 +24,7 @@ export function StarBorder<T extends ElementType = "button">({
   return (
     <Component 
       className={cn(
-        "relative inline-block py-[1px] overflow-hidden rounded-[20px]",
+        "relative inline-block py-[1px] overflow-hidden rounded-[20px] group",
         className
       )} 
       {...props}
@@ -32,7 +32,7 @@ export function StarBorder<T extends ElementType = "button">({
       <div
         className={cn(
           "absolute w-[300%] h-[50%] bottom-[-11px] right-[-250%] rounded-full animate-star-movement-bottom z-0",
-          "opacity-20 dark:opacity-70" 
+          "opacity-0 group-hover:opacity-70 transition-opacity duration-300"
         )}
         style={{
           background: `radial-gradient(circle, ${defaultColor}, transparent 10%)`,
@@ -42,7 +42,7 @@ export function StarBorder<T extends ElementType = "button">({
       <div
         className={cn(
           "absolute w-[300%] h-[50%] top-[-10px] left-[-250%] rounded-full animate-star-movement-top z-0",
-          "opacity-20 dark:opacity-70"
+          "opacity-0 group-hover:opacity-70 transition-opacity duration-300"
         )}
         style={{
           background: `radial-gradient(circle, ${defaultColor}, transparent 10%)`,
@@ -52,7 +52,8 @@ export function StarBorder<T extends ElementType = "button">({
       <div className={cn(
         "relative z-1 border text-foreground text-center text-base py-4 px-6 rounded-[20px]",
         "bg-gradient-to-b from-background/90 to-muted/90 border-border/40",
-        "dark:from-background dark:to-muted dark:border-border"
+        "dark:from-background dark:to-muted dark:border-border",
+        "group-hover:border-fuchsia-500/40 transition-colors duration-300"
       )}>
         {children}
       </div>
