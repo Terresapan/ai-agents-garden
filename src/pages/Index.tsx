@@ -154,12 +154,12 @@ const Index = () => {
           <Card className="w-full bg-black/[0.96] relative overflow-hidden transform transition-transform duration-300 hover:scale-102">
             <div className="flex flex-col-reverse md:flex-row items-center p-8 gap-8">
               {/* Content Section */}
-              <div className="w-full md:w-2/3 relative z-10">
+              <div className="w-full md:w-2/3 relative z-10 px-[16px]">
                 <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
                 
-                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-4">Terresa Pan</h2>
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-4 px-[8px]">Terresa Pan</h2>
                 
-                <div className="flex gap-4 mb-6">
+                <div className="flex gap-4 mb-6 px-[8px]">
                   <a href="https://www.linkedin.com/in/terresa-pan-292443245/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
                     <Linkedin size={20} />
                   </a>
@@ -175,7 +175,7 @@ const Index = () => {
                   With over a decade of experience in AI and machine learning, I specialize in helping businesses leverage cutting-edge technology to solve complex problems and drive innovation. My approach combines technical expertise with practical business acumen to deliver results that matter.
                 </p>
                 
-                <div className="space-y-4 text-neutral-400">
+                <div className="space-y-4 text-neutral-400 px-[8px]">
                   <p>• Expert in AI Strategy Development and Implementation</p>
                   <p>• Specialized in Machine Learning Solutions</p>
                   <p>• Proven Track Record in Digital Transformation</p>
