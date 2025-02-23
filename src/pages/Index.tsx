@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
@@ -17,23 +16,21 @@ import { ButtonColorful } from "@/components/ui/button-colorful";
 import { Link } from "react-router-dom";
 import { SharedHeader } from "@/components/ui/shared-header";
 import { SharedFooter } from "@/components/ui/shared-footer";
-
 const Index = () => {
   const location = useLocation();
-
   useEffect(() => {
     if (location.state?.scrollToIntro) {
       const introSection = document.getElementById('intro-section');
       if (introSection) {
-        introSection.scrollIntoView({ behavior: 'smooth' });
+        introSection.scrollIntoView({
+          behavior: 'smooth'
+        });
       }
       // Clear the state after scrolling
       window.history.replaceState({}, document.title);
     }
   }, [location]);
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       <SharedHeader />
 
       {/* Main Content */}
@@ -109,9 +106,7 @@ const Index = () => {
             <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
               <a href="https://mrdatawhisperer.streamlit.app/" target="_blank" rel="noopener noreferrer">
                 <GlareCard className="flex flex-col items-center justify-center">
-                  <img className="h-full w-full absolute inset-0 object-cover opacity-50" 
-                       src="/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png" 
-                       alt="Data Whisperer" />
+                  <img className="h-full w-full absolute inset-0 object-cover opacity-50" src="/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png" alt="Data Whisperer" />
                   <div className="relative z-10 p-6 text-center">
                     <h3 className="text-xl font-bold mb-2 text-white">Data Whisperer</h3>
                     <p className="text-sm text-gray-200">Unlock data insights with AI-powered analysis</p>
@@ -123,9 +118,7 @@ const Index = () => {
             <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
               <a href="https://calenderly.streamlit.app/" target="_blank" rel="noopener noreferrer">
                 <GlareCard className="flex flex-col items-center justify-center">
-                  <img className="h-full w-full absolute inset-0 object-cover opacity-50" 
-                       src="/lovable-uploads/c9f4c6a5-97e2-4104-8e77-6c195914e5c4.png" 
-                       alt="CalendlySocial" />
+                  <img className="h-full w-full absolute inset-0 object-cover opacity-50" src="/lovable-uploads/c9f4c6a5-97e2-4104-8e77-6c195914e5c4.png" alt="CalendlySocial" />
                   <div className="relative z-10 p-6 text-center">
                     <h3 className="text-xl font-bold mb-2 text-white">CalendlySocial</h3>
                     <p className="text-sm text-gray-200">Streamline your social media calendar with AI-driven scheduling</p>
@@ -137,9 +130,7 @@ const Index = () => {
             <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
               <a href="https://debating-arena.streamlit.app/" target="_blank" rel="noopener noreferrer">
                 <GlareCard className="flex flex-col items-center justify-center">
-                  <img className="h-full w-full absolute inset-0 object-cover opacity-50" 
-                       src="/lovable-uploads/b5a40246-1a1f-413e-a3e7-a5f46910aabc.png" 
-                       alt="Debating Arena" />
+                  <img className="h-full w-full absolute inset-0 object-cover opacity-50" src="/lovable-uploads/b5a40246-1a1f-413e-a3e7-a5f46910aabc.png" alt="Debating Arena" />
                   <div className="relative z-10 p-6 text-center">
                     <h3 className="text-xl font-bold mb-2 text-white">Debating Arena</h3>
                     <p className="text-sm text-gray-200">Sharpen your ideas with AI-powered debates</p>
@@ -180,7 +171,7 @@ const Index = () => {
                   </a>
                 </div>
 
-                <p className="text-lg text-neutral-300 mb-6">
+                <p className="text-lg text-neutral-300 mb-6 px-[8px]">
                   With over a decade of experience in AI and machine learning, I specialize in helping businesses leverage cutting-edge technology to solve complex problems and drive innovation. My approach combines technical expertise with practical business acumen to deliver results that matter.
                 </p>
                 
@@ -226,25 +217,13 @@ const Index = () => {
                   </h2>
                   <form className="space-y-6">
                     <div>
-                      <Input
-                        type="text"
-                        placeholder="Name"
-                        className="bg-background/50 border-white/10"
-                      />
+                      <Input type="text" placeholder="Name" className="bg-background/50 border-white/10" />
                     </div>
                     <div>
-                      <Input
-                        type="email"
-                        placeholder="Email"
-                        className="bg-background/50 border-white/10"
-                      />
+                      <Input type="email" placeholder="Email" className="bg-background/50 border-white/10" />
                     </div>
                     <div>
-                      <ButtonColorful 
-                        type="submit"
-                        label="Submit"
-                        className="w-full"
-                      />
+                      <ButtonColorful type="submit" label="Submit" className="w-full" />
                     </div>
                   </form>
                 </div>
@@ -255,8 +234,6 @@ const Index = () => {
       </div>
 
       <SharedFooter />
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
