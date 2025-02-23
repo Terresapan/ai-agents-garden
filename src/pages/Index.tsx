@@ -20,7 +20,7 @@ const Index = () => {
               Agents
             </StarBorder>
             <StarBorder>
-              Blogs
+              Get in Touch
             </StarBorder>
           </div>
         </div>
@@ -120,6 +120,50 @@ const Index = () => {
               />
             </GlareCard>
           </div>
+        </div>
+
+        {/* AI Consultant Introduction Section */}
+        <div className="max-w-7xl mx-auto px-4 pb-24">
+          <Card className="w-full bg-black/[0.96] relative overflow-hidden transform transition-transform duration-300 hover:scale-105">
+            <div className="flex flex-col md:flex-row items-center p-8 gap-8">
+              {/* Image Section */}
+              <div className="w-full md:w-1/3">
+                <img 
+                  src="/lovable-uploads/b1ad035f-078b-47d9-a438-e756b6563a50.png"
+                  alt="AI Consultant"
+                  className="w-full h-[400px] object-cover rounded-lg"
+                />
+              </div>
+
+              {/* Content Section */}
+              <div className="w-full md:w-2/3 relative z-10">
+                <Spotlight
+                  className="-top-40 left-0 md:left-60 md:-top-20"
+                  fill="white"
+                />
+                
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6">
+                  Meet Your AI Consultant
+                </h2>
+                
+                <p className="text-lg text-neutral-300 mb-6">
+                  With over a decade of experience in AI and machine learning, I specialize in helping businesses leverage cutting-edge technology to solve complex problems and drive innovation. My approach combines technical expertise with practical business acumen to deliver results that matter.
+                </p>
+                
+                <div className="space-y-4 text-neutral-400">
+                  <p>• Expert in AI Strategy Development and Implementation</p>
+                  <p>• Specialized in Machine Learning Solutions</p>
+                  <p>• Proven Track Record in Digital Transformation</p>
+                </div>
+
+                <div className="mt-8">
+                  <RainbowButton>
+                    Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                  </RainbowButton>
+                </div>
+              </div>
+            </div>
+          </Card>
         </div>
       </div>
     </div>
