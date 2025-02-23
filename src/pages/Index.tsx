@@ -9,6 +9,13 @@ import { GlareCard } from "@/components/ui/glare-card";
 import { ArrowRight } from "lucide-react";
 
 const Index = () => {
+  const scrollToIntro = () => {
+    const introSection = document.getElementById('intro-section');
+    if (introSection) {
+      introSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className="min-h-screen">
       {/* Fixed Header */}
@@ -19,7 +26,7 @@ const Index = () => {
             <StarBorder>
               Agents
             </StarBorder>
-            <StarBorder>
+            <StarBorder onClick={scrollToIntro} className="cursor-pointer">
               Get in Touch
             </StarBorder>
           </div>
@@ -94,47 +101,10 @@ const Index = () => {
           </Card>
         </div>
 
-        {/* Featured Agents Section */}
-        <div className="max-w-7xl mx-auto px-4 pb-24">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">
-            Featured <span className="text-fuchsia-500">Agents</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
-            <GlareCard className="flex flex-col items-center justify-center">
-              <img 
-                className="h-full w-full absolute inset-0 object-cover"
-                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </GlareCard>
-            <GlareCard className="flex flex-col items-center justify-center">
-              <img 
-                className="h-full w-full absolute inset-0 object-cover"
-                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </GlareCard>
-            <GlareCard className="flex flex-col items-center justify-center">
-              <img 
-                className="h-full w-full absolute inset-0 object-cover"
-                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </GlareCard>
-          </div>
-        </div>
-
         {/* AI Consultant Introduction Section */}
-        <div className="max-w-7xl mx-auto px-4 pb-24">
+        <div className="max-w-7xl mx-auto px-4 pb-24" id="intro-section">
           <Card className="w-full bg-black/[0.96] relative overflow-hidden transform transition-transform duration-300 hover:scale-105">
-            <div className="flex flex-col md:flex-row items-center p-8 gap-8">
-              {/* Image Section */}
-              <div className="w-full md:w-1/3">
-                <img 
-                  src="/lovable-uploads/b1ad035f-078b-47d9-a438-e756b6563a50.png"
-                  alt="AI Consultant"
-                  className="w-full h-[400px] object-cover rounded-lg"
-                />
-              </div>
-
+            <div className="flex flex-col-reverse md:flex-row items-center p-8 gap-8">
               {/* Content Section */}
               <div className="w-full md:w-2/3 relative z-10">
                 <Spotlight
@@ -162,8 +132,45 @@ const Index = () => {
                   </RainbowButton>
                 </div>
               </div>
+
+              {/* Image Section */}
+              <div className="w-full md:w-1/3">
+                <img 
+                  src="/lovable-uploads/b1ad035f-078b-47d9-a438-e756b6563a50.png"
+                  alt="AI Consultant"
+                  className="w-full h-[400px] object-cover rounded-lg"
+                />
+              </div>
             </div>
           </Card>
+        </div>
+
+        {/* Featured Agents Section */}
+        <div className="max-w-7xl mx-auto px-4 pb-24">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">
+            Featured <span className="text-fuchsia-500">Agents</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
+            <GlareCard className="flex flex-col items-center justify-center">
+              <img 
+                className="h-full w-full absolute inset-0 object-cover"
+                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </GlareCard>
+            <GlareCard className="flex flex-col items-center justify-center">
+              <img 
+                className="h-full w-full absolute inset-0 object-cover"
+                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </GlareCard>
+            <GlareCard className="flex flex-col items-center justify-center">
+              <img 
+                className="h-full w-full absolute inset-0 object-cover"
+                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </GlareCard>
+          </div>
         </div>
       </div>
     </div>
