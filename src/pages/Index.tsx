@@ -10,6 +10,8 @@ import { ArrowRight } from "lucide-react";
 import { GlobeDemo } from "@/components/ui/code.demo";
 import { Input } from "@/components/ui/input";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+import { ButtonColorful } from "@/components/ui/button-colorful";
+
 const Index = () => {
   const scrollToIntro = () => {
     const introSection = document.getElementById('intro-section');
@@ -19,7 +21,8 @@ const Index = () => {
       });
     }
   };
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
@@ -196,23 +199,41 @@ const Index = () => {
               {/* Contact form on the right */}
               <div className="relative rounded-lg overflow-hidden">
                 <div className="absolute inset-0 -z-10">
-                  <GlowingEffect disabled={false} glow={true} spread={60} blur={20} borderWidth={2} proximity={100} inactiveZone={0.4} />
+                  <GlowingEffect 
+                    disabled={false}
+                    glow={true}
+                    spread={60}
+                    blur={20}
+                    borderWidth={2}
+                    proximity={100}
+                    inactiveZone={0.4}
+                  />
                 </div>
                 <div className="relative bg-black/[0.96] rounded-lg p-8 border border-white/10">
-                  <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center">Subscribe to Newsletters</h2>
+                  <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center">
+                    Subscribe to Newsletters
+                  </h2>
                   <form className="space-y-6">
                     <div>
-                      <Input type="text" placeholder="Name" className="bg-background/50 border-white/10" />
+                      <Input
+                        type="text"
+                        placeholder="Name"
+                        className="bg-background/50 border-white/10"
+                      />
                     </div>
                     <div>
-                      <Input type="email" placeholder="Email" className="bg-background/50 border-white/10" />
+                      <Input
+                        type="email"
+                        placeholder="Email"
+                        className="bg-background/50 border-white/10"
+                      />
                     </div>
                     <div>
-                      <button type="submit" className="group w-full px-4 py-2 text-lg font-semibold rounded transition-all duration-300 bg-black/50 border border-white/10 hover:bg-white/5">
-                        <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                          Submit <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                        </span>
-                      </button>
+                      <ButtonColorful 
+                        type="submit"
+                        label="Submit"
+                        className="w-full"
+                      />
                     </div>
                   </form>
                 </div>
@@ -242,6 +263,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
