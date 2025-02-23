@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
@@ -218,16 +219,18 @@ const Index = () => {
                     />
                   </div>
                   <div>
-                    <RainbowButton type="submit" className="w-full">
-                      Submit <ArrowRight className="ml-2 h-4 w-4" />
-                    </RainbowButton>
+                    <button
+                      type="submit"
+                      className="w-full px-4 py-2 text-lg font-bold rounded bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 border border-white/10 hover:bg-white/5 transition-colors"
+                    >
+                      Submit <ArrowRight className="ml-2 h-4 w-4 inline" />
+                    </button>
                   </div>
                 </form>
               </div>
             </div>
           </div>
         </div>
-      </div>
 
       {/* Footer */}
       <footer className="bg-black/[0.96] border-t border-white/10">
