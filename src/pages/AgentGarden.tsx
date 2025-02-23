@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { AgentCard } from "@/components/ui/agent-card";
@@ -14,20 +15,6 @@ const agents = [
     category: "Data Analytics",
     imagePath: "/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png",
     link: "https://mrdatawhisperer.streamlit.app/"
-  },
-  {
-    title: "Market Horizon Explorer",
-    description: "Navigate market trends with AI-powered strategic insights",
-    category: "Marketing Strategy",
-    imagePath: "/lovable-uploads/b7ab18de-a9f2-4a2a-93fa-ca67fd341b36.png",
-    link: "#"
-  },
-  {
-    title: "Data Canvas",
-    description: "Transform complex data into clear, actionable visualizations",
-    category: "Data Analytics",
-    imagePath: "/lovable-uploads/e467e6f5-b118-47cd-b21f-b6323fbc307b.png",
-    link: "#"
   },
   {
     title: "CalendlySocial",
@@ -84,6 +71,20 @@ const agents = [
     category: "Content Creation",
     imagePath: "/lovable-uploads/3509990a-996f-4e46-a672-02033d1a47d8.png",
     link: "https://linkedinpostmaster.streamlit.app/"
+  },
+  {
+    title: "Market Horizon Explorer",
+    description: "Navigate market trends with AI-powered strategic insights",
+    category: "Marketing Strategy",
+    imagePath: "/lovable-uploads/b7ab18de-a9f2-4a2a-93fa-ca67fd341b36.png",
+    link: "#"
+  },
+  {
+    title: "Data Canvas",
+    description: "Transform complex data into clear, actionable visualizations",
+    category: "Data Analytics",
+    imagePath: "/lovable-uploads/e467e6f5-b118-47cd-b21f-b6323fbc307b.png",
+    link: "#"
   }
 ];
 
