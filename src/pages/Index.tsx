@@ -198,37 +198,47 @@ const Index = () => {
               </div>
 
               {/* Contact form on the right */}
-              <div className="relative bg-black/[0.96] rounded-lg p-8 border border-white/10">
-                <GlowingEffect disabled={false} glow={true} spread={30} blur={20} />
-                <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center">
-                  Get in Touch
-                </h2>
-                <form className="space-y-6">
-                  <div>
-                    <Input
-                      type="text"
-                      placeholder="Name"
-                      className="bg-background/50 border-white/10"
-                    />
-                  </div>
-                  <div>
-                    <Input
-                      type="email"
-                      placeholder="Email"
-                      className="bg-background/50 border-white/10"
-                    />
-                  </div>
-                  <div>
-                    <button
-                      type="submit"
-                      className="group w-full px-4 py-2 text-lg font-semibold rounded transition-all duration-300 bg-black/50 border border-white/10 hover:bg-white/5"
-                    >
-                      <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
-                        Submit <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                      </span>
-                    </button>
-                  </div>
-                </form>
+              <div className="group relative bg-black/[0.96] rounded-lg p-8 border border-white/10 overflow-hidden">
+                <div className="relative z-10">
+                  <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                    Get in Touch
+                  </h2>
+                  <form className="space-y-6">
+                    <div>
+                      <Input
+                        type="text"
+                        placeholder="Name"
+                        className="bg-background/50 border-white/10"
+                      />
+                    </div>
+                    <div>
+                      <Input
+                        type="email"
+                        placeholder="Email"
+                        className="bg-background/50 border-white/10"
+                      />
+                    </div>
+                    <div>
+                      <button
+                        type="submit"
+                        className="group w-full px-4 py-2 text-lg font-semibold rounded transition-all duration-300 bg-black/50 border border-white/10 hover:bg-white/5"
+                      >
+                        <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
+                          Submit <ArrowRight className="inline-block ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </span>
+                      </button>
+                    </div>
+                  </form>
+                </div>
+                <div className="absolute inset-0 transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+                  <GlowingEffect 
+                    disabled={false} 
+                    glow={true} 
+                    spread={30} 
+                    blur={20}
+                    borderWidth={2}
+                  />
+                </div>
               </div>
             </div>
           </div>
