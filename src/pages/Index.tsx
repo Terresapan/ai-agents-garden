@@ -110,7 +110,7 @@ const Index = () => {
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
-            <div className="relative w-full">
+            <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
               <a href="https://mrdatawhisperer.streamlit.app/" target="_blank" rel="noopener noreferrer">
                 <GlareCard className="flex flex-col items-center justify-center">
                   <img className="h-full w-full absolute inset-0 object-cover opacity-50" 
@@ -124,7 +124,7 @@ const Index = () => {
               </a>
             </div>
             
-            <div className="relative w-full">
+            <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
               <a href="https://calenderly.streamlit.app/" target="_blank" rel="noopener noreferrer">
                 <GlareCard className="flex flex-col items-center justify-center">
                   <img className="h-full w-full absolute inset-0 object-cover opacity-50" 
@@ -138,7 +138,7 @@ const Index = () => {
               </a>
             </div>
             
-            <div className="relative w-full">
+            <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
               <a href="https://debating-arena.streamlit.app/" target="_blank" rel="noopener noreferrer">
                 <GlareCard className="flex flex-col items-center justify-center">
                   <img className="h-full w-full absolute inset-0 object-cover opacity-50" 
