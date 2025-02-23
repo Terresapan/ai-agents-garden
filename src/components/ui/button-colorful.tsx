@@ -7,11 +7,11 @@ interface ButtonColorfulProps extends React.ButtonHTMLAttributes<HTMLButtonEleme
     label?: string;
 }
 
-export function ButtonColorful({
+const ButtonColorful = ({
     className,
     label = "Explore Components",
     ...props
-}: ButtonColorfulProps) {
+}: ButtonColorfulProps) => {
     return (
         <Button
             className={cn(
@@ -42,4 +42,4 @@ export function ButtonColorful({
     );
 }
 
-export { ButtonColorful }
+export { ButtonColorful };
