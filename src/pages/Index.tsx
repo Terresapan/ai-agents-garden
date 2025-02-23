@@ -18,58 +18,59 @@ import { SharedHeader } from "@/components/ui/shared-header";
 import { SharedFooter } from "@/components/ui/shared-footer";
 import { supabase } from "@/integrations/supabase/client";
 import { useToast } from "@/hooks/use-toast";
-
 const Index = () => {
   const location = useLocation();
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [formData, setFormData] = useState({
     name: '',
     email: ''
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
-
   useEffect(() => {
     if (location.state?.scrollToIntro) {
       const introSection = document.getElementById('intro-section');
       if (introSection) {
-        introSection.scrollIntoView({ behavior: 'smooth' });
+        introSection.scrollIntoView({
+          behavior: 'smooth'
+        });
       }
       // Clear the state after scrolling
       window.history.replaceState({}, document.title);
     }
   }, [location]);
-
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const {
+      name,
+      value
+    } = e.target;
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
-
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
-
     try {
-      const { error } = await supabase
-        .from('contacts')
-        .insert([
-          {
-            name: formData.name,
-            email: formData.email
-          }
-        ]);
-
+      const {
+        error
+      } = await supabase.from('contacts').insert([{
+        name: formData.name,
+        email: formData.email
+      }]);
       if (error) throw error;
-
       toast({
         title: "Success!",
-        description: "Thank you for your submission!",
+        description: "Thank you for your submission!"
       });
 
       // Reset form
-      setFormData({ name: '', email: '' });
+      setFormData({
+        name: '',
+        email: ''
+      });
     } catch (error) {
       console.error('Error:', error);
       toast({
@@ -81,7 +82,6 @@ const Index = () => {
       setIsSubmitting(false);
     }
   };
-
   return <div className="min-h-screen flex flex-col">
       <SharedHeader />
 
@@ -216,7 +216,7 @@ const Index = () => {
                   </a>
                 </div>
 
-                <p className="text-lg text-neutral-300 mb-6 px-[8px]">Results-oriented leader driving AI adoption within small businesses, creating quantifiable improvements in efficiency and profitability. Proven ability to identify and implement impactful AI solutions, build cross-functional teams, and mitigate risks, ensuring successful technology integration and measurable business outcomes.</p>
+                <p className="text-lg text-neutral-300 mb-6 px-[8px]">Results-driven leader accelerating AI adoption in SMB to boost efficiency and profitability. Skilled in identifying impactful AI solutions, building teams, and mitigating risks for seamless integration and measurable outcomes.</p>
                 
                 <div className="space-y-4 text-neutral-400 px-[8px]">
                   <p>• Expert in AI Strategy Development and Implementation</p>
@@ -260,34 +260,13 @@ const Index = () => {
                   </h2>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div>
-                      <Input
-                        type="text"
-                        name="name"
-                        placeholder="Your Name"
-                        value={formData.name}
-                        onChange={handleInputChange}
-                        required
-                        className="bg-background/50 border-white/10"
-                      />
+                      <Input type="text" name="name" placeholder="Your Name" value={formData.name} onChange={handleInputChange} required className="bg-background/50 border-white/10" />
                     </div>
                     <div>
-                      <Input
-                        type="email"
-                        name="email"
-                        placeholder="Your Email"
-                        value={formData.email}
-                        onChange={handleInputChange}
-                        required
-                        className="bg-background/50 border-white/10"
-                      />
+                      <Input type="email" name="email" placeholder="Your Email" value={formData.email} onChange={handleInputChange} required className="bg-background/50 border-white/10" />
                     </div>
                     <div>
-                      <ButtonColorful
-                        type="submit"
-                        disabled={isSubmitting}
-                        label={isSubmitting ? "Submitting..." : "Submit"}
-                        className="w-full"
-                      />
+                      <ButtonColorful type="submit" disabled={isSubmitting} label={isSubmitting ? "Submitting..." : "Submit"} className="w-full" />
                     </div>
                   </form>
                 </div>
@@ -303,5 +282,4 @@ const Index = () => {
       <SharedFooter />
     </div>;
 };
-
 export default Index;
