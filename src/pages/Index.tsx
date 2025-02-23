@@ -1,3 +1,4 @@
+
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
@@ -5,7 +6,9 @@ import { StarBorder } from "@/components/ui/star-border";
 import { SplineScene } from "@/components/ui/splite";
 import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
+import { GlareCard } from "@/components/ui/glare-card";
 import { ArrowRight } from "lucide-react";
+
 const Index = () => {
   return <AuroraBackground>
       {/* Header */}
@@ -25,15 +28,15 @@ const Index = () => {
 
       {/* Main content with top padding to account for fixed header */}
       <motion.div initial={{
-      opacity: 0,
-      y: 20
-    }} animate={{
-      opacity: 1,
-      y: 0
-    }} transition={{
-      duration: 1,
-      ease: "easeOut"
-    }} className="relative flex flex-col gap-6 items-center justify-center px-4 max-w-4xl mx-auto text-center pt-24">
+        opacity: 0,
+        y: 20
+      }} animate={{
+        opacity: 1,
+        y: 0
+      }} transition={{
+        duration: 1,
+        ease: "easeOut"
+      }} className="relative flex flex-col gap-6 items-center justify-center px-4 max-w-4xl mx-auto text-center pt-24">
         <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold dark:text-white">
           Welcome to Your Next{" "}
           <span className="text-fuchsia-500">Amazing</span>{" "}
@@ -76,7 +79,36 @@ const Index = () => {
             </div>
           </div>
         </Card>
+
+        {/* Featured Agents Section */}
+        <div className="w-full mt-24">
+          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center dark:text-white">
+            Featured <span className="text-fuchsia-500">Agents</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
+            <GlareCard className="flex flex-col items-center justify-center">
+              <img 
+                className="h-full w-full absolute inset-0 object-cover"
+                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </GlareCard>
+            <GlareCard className="flex flex-col items-center justify-center">
+              <img 
+                className="h-full w-full absolute inset-0 object-cover"
+                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </GlareCard>
+            <GlareCard className="flex flex-col items-center justify-center">
+              <img 
+                className="h-full w-full absolute inset-0 object-cover"
+                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </GlareCard>
+          </div>
+        </div>
       </motion.div>
     </AuroraBackground>;
 };
+
 export default Index;
