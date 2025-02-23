@@ -171,13 +171,11 @@ const Index = () => {
                   </a>
                 </div>
 
-                <p className="text-lg text-neutral-300 mb-6 px-[8px]">
-                  With over a decade of experience in AI and machine learning, I specialize in helping businesses leverage cutting-edge technology to solve complex problems and drive innovation. My approach combines technical expertise with practical business acumen to deliver results that matter.
-                </p>
+                <p className="text-lg text-neutral-300 mb-6 px-[8px]">Results-oriented leader driving AI adoption within small businesses, creating quantifiable improvements in efficiency and profitability. Proven ability to identify and implement impactful AI solutions, build cross-functional teams, and mitigate risks, ensuring successful technology integration and measurable business outcomes.</p>
                 
                 <div className="space-y-4 text-neutral-400 px-[8px]">
                   <p>• Expert in AI Strategy Development and Implementation</p>
-                  <p>• Specialized in Machine Learning Solutions</p>
+                  <p>• Specialized in Developing Agentic Framework Solutions</p>
                   <p>• Proven Track Record in Digital Transformation</p>
                 </div>
 
