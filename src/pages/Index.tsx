@@ -1,4 +1,3 @@
-
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
@@ -8,17 +7,16 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { GlareCard } from "@/components/ui/glare-card";
 import { ArrowRight } from "lucide-react";
-
 const Index = () => {
   const scrollToIntro = () => {
     const introSection = document.getElementById('intro-section');
     if (introSection) {
-      introSection.scrollIntoView({ behavior: 'smooth' });
+      introSection.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <div className="min-h-screen flex flex-col">
+  return <div className="min-h-screen flex flex-col">
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
@@ -41,18 +39,18 @@ const Index = () => {
       {/* Hero Section with Aurora Background */}
       <AuroraBackground>
         <div className="h-screen flex items-center justify-center px-4">
-          <motion.div 
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, ease: "easeOut" }}
-            className="text-center max-w-4xl mx-auto"
-          >
+          <motion.div initial={{
+          opacity: 0,
+          y: 20
+        }} animate={{
+          opacity: 1,
+          y: 0
+        }} transition={{
+          duration: 1,
+          ease: "easeOut"
+        }} className="text-center max-w-4xl mx-auto">
             <div className="w-32 h-32 mx-auto mb-8">
-              <img 
-                src="/lovable-uploads/6912a4d2-a538-4eee-a561-ce397129c20e.png"
-                alt="Profile"
-                className="w-full h-full rounded-full object-cover border-2 border-fuchsia-500/20"
-              />
+              <img src="/lovable-uploads/6912a4d2-a538-4eee-a561-ce397129c20e.png" alt="Profile" className="w-full h-full rounded-full object-cover border-2 border-fuchsia-500/20" />
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
@@ -78,10 +76,7 @@ const Index = () => {
         {/* 3D Interactive Section */}
         <div className="max-w-7xl mx-auto px-4 py-24">
           <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
-            <Spotlight
-              className="-top-40 left-0 md:left-60 md:-top-20"
-              fill="white"
-            />
+            <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
             
             <div className="flex h-full">
               {/* Left content */}
@@ -97,10 +92,7 @@ const Index = () => {
 
               {/* Right content */}
               <div className="flex-1 relative">
-                <SplineScene 
-                  scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode"
-                  className="w-full h-full"
-                />
+                <SplineScene scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" className="w-full h-full" />
               </div>
             </div>
           </Card>
@@ -108,35 +100,26 @@ const Index = () => {
 
         {/* Featured Agents Section */}
         <div className="max-w-7xl mx-auto px-4 pb-24">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">
+          <h2 className="text-3xl font-bold mb-16 text-center dark:text-white md:text-6xl">
             Featured <span className="text-fuchsia-500">Agents</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
             <GlareCard className="flex flex-col items-center justify-center">
-              <img 
-                className="h-full w-full absolute inset-0 object-cover"
-                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
+              <img className="h-full w-full absolute inset-0 object-cover" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             </GlareCard>
             <GlareCard className="flex flex-col items-center justify-center">
-              <img 
-                className="h-full w-full absolute inset-0 object-cover"
-                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
+              <img className="h-full w-full absolute inset-0 object-cover" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             </GlareCard>
             <GlareCard className="flex flex-col items-center justify-center">
-              <img 
-                className="h-full w-full absolute inset-0 object-cover"
-                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
+              <img className="h-full w-full absolute inset-0 object-cover" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" />
             </GlareCard>
           </div>
         </div>
 
         {/* About Me Section */}
         <div className="max-w-7xl mx-auto px-4 pb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">
+          <h2 className="text-3xl font-bold mb-16 text-center dark:text-white md:text-6xl">
             About <span className="text-fuchsia-500">Me</span>
           </h2>
         </div>
@@ -147,10 +130,7 @@ const Index = () => {
             <div className="flex flex-col-reverse md:flex-row items-center p-8 gap-8">
               {/* Content Section */}
               <div className="w-full md:w-2/3 relative z-10">
-                <Spotlight
-                  className="-top-40 left-0 md:left-60 md:-top-20"
-                  fill="white"
-                />
+                <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
                 
                 <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6">
                   Meet Your AI Consultant
@@ -175,11 +155,7 @@ const Index = () => {
 
               {/* Image Section */}
               <div className="w-full md:w-1/3">
-                <img 
-                  src="/lovable-uploads/b1ad035f-078b-47d9-a438-e756b6563a50.png"
-                  alt="AI Consultant"
-                  className="w-full h-[400px] object-cover rounded-lg"
-                />
+                <img src="/lovable-uploads/b1ad035f-078b-47d9-a438-e756b6563a50.png" alt="AI Consultant" className="w-full h-[400px] object-cover rounded-lg" />
               </div>
             </div>
           </Card>
@@ -206,8 +182,6 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
