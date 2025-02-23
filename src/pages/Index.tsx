@@ -157,9 +157,7 @@ const Index = () => {
               <div className="w-full md:w-2/3 relative z-10">
                 <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
                 
-                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6">
-                  Meet Your AI Consultant
-                </h2>
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6">Terresa Pan</h2>
                 
                 <p className="text-lg text-neutral-300 mb-6">
                   With over a decade of experience in AI and machine learning, I specialize in helping businesses leverage cutting-edge technology to solve complex problems and drive innovation. My approach combines technical expertise with practical business acumen to deliver results that matter.
