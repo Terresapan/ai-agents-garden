@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { GlareCard } from "@/components/ui/glare-card";
 import { ArrowRight } from "lucide-react";
+import { GlobeDemo } from "@/components/ui/code.demo";
 
 const Index = () => {
   const scrollToIntro = () => {
@@ -17,6 +18,7 @@ const Index = () => {
       });
     }
   };
+
   return (
     <div className="min-h-screen flex flex-col">
       {/* Fixed Header */}
@@ -75,6 +77,11 @@ const Index = () => {
 
       {/* Main Content */}
       <div className="flex-grow bg-background">
+        {/* Globe Demo Section */}
+        <div className="max-w-7xl mx-auto px-4 py-24">
+          <GlobeDemo />
+        </div>
+
         {/* 3D Interactive Section */}
         <div className="max-w-7xl mx-auto px-4 py-24">
           <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
