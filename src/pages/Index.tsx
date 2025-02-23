@@ -12,6 +12,7 @@ import { Input } from "@/components/ui/input";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { ButtonColorful } from "@/components/ui/button-colorful";
 import { Link } from "react-router-dom";
+import { Linkedin, Github, Youtube } from "lucide-react";
 
 const Index = () => {
   const scrollToIntro = () => {
@@ -176,8 +177,20 @@ const Index = () => {
               <div className="w-full md:w-2/3 relative z-10">
                 <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
                 
-                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-6">Terresa Pan</h2>
+                <h2 className="text-3xl md:text-4xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 mb-4">Terresa Pan</h2>
                 
+                <div className="flex gap-4 mb-6">
+                  <a href="https://www.linkedin.com/in/terresa-pan-292443245/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
+                    <Linkedin size={20} />
+                  </a>
+                  <a href="https://github.com/Terresapan?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
+                    <Github size={20} />
+                  </a>
+                  <a href="https://www.youtube.com/@Terresa_P" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
+                    <Youtube size={20} />
+                  </a>
+                </div>
+
                 <p className="text-lg text-neutral-300 mb-6">
                   With over a decade of experience in AI and machine learning, I specialize in helping businesses leverage cutting-edge technology to solve complex problems and drive innovation. My approach combines technical expertise with practical business acumen to deliver results that matter.
                 </p>
@@ -265,15 +278,23 @@ const Index = () => {
       <footer className="bg-black/[0.96] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-12">
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center space-x-4">
-              <h3 className="text-xl font-semibold text-fuchsia-500">Terresa Pan</h3>
-              <span className="text-neutral-400">|</span>
-              <span className="text-neutral-400">AI Consultant</span>
-            </div>
-            <div className="flex gap-6 text-neutral-400">
-              <a href="#" className="hover:text-fuchsia-500 transition-colors">LinkedIn</a>
-              <a href="#" className="hover:text-fuchsia-500 transition-colors">Twitter</a>
-              <a href="#" className="hover:text-fuchsia-500 transition-colors">Email</a>
+            <div className="flex flex-col items-center md:items-start gap-4">
+              <div className="flex items-center space-x-4">
+                <h3 className="text-xl font-semibold text-fuchsia-500">Terresa Pan</h3>
+                <span className="text-neutral-400">|</span>
+                <span className="text-neutral-400">AI Consultant</span>
+              </div>
+              <div className="flex gap-4">
+                <a href="https://www.linkedin.com/in/terresa-pan-292443245/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
+                  <Linkedin size={20} />
+                </a>
+                <a href="https://github.com/Terresapan?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
+                  <Github size={20} />
+                </a>
+                <a href="https://www.youtube.com/@Terresa_P" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
+                  <Youtube size={20} />
+                </a>
+              </div>
             </div>
             <div className="text-neutral-500 text-sm">
               © {new Date().getFullYear()} All rights reserved.
