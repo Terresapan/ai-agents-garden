@@ -7,6 +7,7 @@ import { Card } from "@/components/ui/card";
 import { Spotlight } from "@/components/ui/spotlight";
 import { GlareCard } from "@/components/ui/glare-card";
 import { ArrowRight } from "lucide-react";
+
 const Index = () => {
   const scrollToIntro = () => {
     const introSection = document.getElementById('intro-section');
@@ -16,7 +17,8 @@ const Index = () => {
       });
     }
   };
-  return <div className="min-h-screen flex flex-col">
+  return (
+    <div className="min-h-screen flex flex-col">
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
@@ -100,8 +102,9 @@ const Index = () => {
 
         {/* Featured Agents Section */}
         <div className="max-w-7xl mx-auto px-4 pb-24">
-          <h2 className="text-3xl font-bold mb-16 text-center dark:text-white md:text-6xl">
-            Featured <span className="text-fuchsia-500">Agents</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
+            <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Featured </span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-fuchsia-500">Agents</span>
           </h2>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
@@ -119,8 +122,9 @@ const Index = () => {
 
         {/* About Me Section */}
         <div className="max-w-7xl mx-auto px-4 pb-12">
-          <h2 className="text-3xl font-bold mb-16 text-center dark:text-white md:text-6xl">
-            About <span className="text-fuchsia-500">Me</span>
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center">
+            <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">About </span>
+            <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-fuchsia-500">Me</span>
           </h2>
         </div>
 
@@ -182,6 +186,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
