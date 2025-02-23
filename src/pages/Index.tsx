@@ -54,7 +54,7 @@ const Index = () => {
               </div>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-                <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Welcome to my Next-Gen </span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Welcome to My Next-Gen </span>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">Agent Garden</span>
               </h1>
               
