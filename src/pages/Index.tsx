@@ -2,6 +2,7 @@
 import { motion } from "framer-motion";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { Linkedin, Github, Youtube } from "lucide-react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { StarBorder } from "@/components/ui/star-border";
