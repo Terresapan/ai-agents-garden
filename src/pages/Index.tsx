@@ -228,8 +228,8 @@ const Index = () => {
               </div>
 
               {/* Contact form on the right */}
-              <div className="relative rounded-lg overflow-hidden">
-                <div className="absolute inset-0 -z-10">
+              <div className="relative rounded-lg">
+                <div className="relative rounded-lg p-8 border border-white/10 bg-black/[0.96] overflow-hidden">
                   <GlowingEffect 
                     disabled={false}
                     glow={true}
@@ -238,9 +238,8 @@ const Index = () => {
                     borderWidth={2}
                     proximity={100}
                     inactiveZone={0.4}
+                    movementDuration={2}
                   />
-                </div>
-                <div className="relative bg-black/[0.96] rounded-lg p-8 border border-white/10">
                   <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center">
                     Subscribe to Newsletters
                   </h2>
