@@ -10,6 +10,7 @@ import { ArrowRight } from "lucide-react";
 import { GlobeDemo } from "@/components/ui/code.demo";
 import { Input } from "@/components/ui/input";
 import { GlowingEffect } from "@/components/ui/glowing-effect";
+
 const Index = () => {
   const scrollToIntro = () => {
     const introSection = document.getElementById('intro-section');
@@ -19,7 +20,9 @@ const Index = () => {
       });
     }
   };
-  return <div className="min-h-screen flex flex-col">
+
+  return (
+    <div className="min-h-screen flex flex-col">
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
@@ -168,9 +171,11 @@ const Index = () => {
                 </div>
 
                 <div className="mt-8">
-                  <RainbowButton>
-                    Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
-                  </RainbowButton>
+                  <a href="https://calendly.com/terresap2010/30min" target="_blank" rel="noopener noreferrer">
+                    <RainbowButton>
+                      Schedule a Consultation <ArrowRight className="ml-2 h-4 w-4" />
+                    </RainbowButton>
+                  </a>
                 </div>
               </div>
 
@@ -242,6 +247,8 @@ const Index = () => {
           </div>
         </div>
       </footer>
-    </div>;
+    </div>
+  );
 };
+
 export default Index;
