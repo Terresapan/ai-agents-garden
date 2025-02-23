@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
-import { Button } from "@/components/ui/button";
+import { StarBorder } from "@/components/ui/star-border";
 import { ArrowRight } from "lucide-react";
 
 const Index = () => {
@@ -33,13 +33,9 @@ const Index = () => {
             Get Started <ArrowRight className="ml-2 h-4 w-4" />
           </RainbowButton>
           
-          <Button 
-            variant="outline"
-            size="lg"
-            className="rounded-full px-8"
-          >
+          <StarBorder>
             Learn More
-          </Button>
+          </StarBorder>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-16">
