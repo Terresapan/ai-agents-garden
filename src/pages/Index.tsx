@@ -231,6 +231,7 @@ const Index = () => {
             </div>
           </div>
         </div>
+      </div>
 
       {/* Footer */}
       <footer className="bg-black/[0.96] border-t border-white/10">
