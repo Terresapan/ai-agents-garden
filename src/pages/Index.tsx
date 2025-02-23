@@ -111,33 +111,45 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
             <div className="relative w-full">
-              <GlareCard className="flex flex-col items-center justify-center">
-                <img className="h-full w-full absolute inset-0 object-cover opacity-50" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Agent" />
-                <div className="relative z-10 p-6 text-center">
-                  <h3 className="text-xl font-bold mb-2 text-white">Data Whisperer</h3>
-                  <p className="text-sm text-gray-200">Your AI-powered data scientist</p>
-                </div>
-              </GlareCard>
+              <a href="https://mrdatawhisperer.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                <GlareCard className="flex flex-col items-center justify-center">
+                  <img className="h-full w-full absolute inset-0 object-cover opacity-50" 
+                       src="/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png" 
+                       alt="Data Whisperer" />
+                  <div className="relative z-10 p-6 text-center">
+                    <h3 className="text-xl font-bold mb-2 text-white">Data Whisperer</h3>
+                    <p className="text-sm text-gray-200">Unlock data insights with AI-powered analysis</p>
+                  </div>
+                </GlareCard>
+              </a>
             </div>
             
             <div className="relative w-full">
-              <GlareCard className="flex flex-col items-center justify-center">
-                <img className="h-full w-full absolute inset-0 object-cover opacity-50" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Agent" />
-                <div className="relative z-10 p-6 text-center">
-                  <h3 className="text-xl font-bold mb-2 text-white">CalendlySocial</h3>
-                  <p className="text-sm text-gray-200">Automate your social media calendar with AI-powered scheduling</p>
-                </div>
-              </GlareCard>
+              <a href="https://calenderly.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                <GlareCard className="flex flex-col items-center justify-center">
+                  <img className="h-full w-full absolute inset-0 object-cover opacity-50" 
+                       src="/lovable-uploads/c9f4c6a5-97e2-4104-8e77-6c195914e5c4.png" 
+                       alt="CalendlySocial" />
+                  <div className="relative z-10 p-6 text-center">
+                    <h3 className="text-xl font-bold mb-2 text-white">CalendlySocial</h3>
+                    <p className="text-sm text-gray-200">Streamline your social media calendar with AI-driven scheduling</p>
+                  </div>
+                </GlareCard>
+              </a>
             </div>
             
             <div className="relative w-full">
-              <GlareCard className="flex flex-col items-center justify-center">
-                <img className="h-full w-full absolute inset-0 object-cover opacity-50" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Agent" />
-                <div className="relative z-10 p-6 text-center">
-                  <h3 className="text-xl font-bold mb-2 text-white">Debating Arena</h3>
-                  <p className="text-sm text-gray-200">Challenge your ideas with AI-powered debate</p>
-                </div>
-              </GlareCard>
+              <a href="https://debating-arena.streamlit.app/" target="_blank" rel="noopener noreferrer">
+                <GlareCard className="flex flex-col items-center justify-center">
+                  <img className="h-full w-full absolute inset-0 object-cover opacity-50" 
+                       src="/lovable-uploads/b5a40246-1a1f-413e-a3e7-a5f46910aabc.png" 
+                       alt="Debating Arena" />
+                  <div className="relative z-10 p-6 text-center">
+                    <h3 className="text-xl font-bold mb-2 text-white">Debating Arena</h3>
+                    <p className="text-sm text-gray-200">Sharpen your ideas with AI-powered debates</p>
+                  </div>
+                </GlareCard>
+              </a>
             </div>
           </div>
         </div>
