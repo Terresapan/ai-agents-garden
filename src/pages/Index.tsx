@@ -17,7 +17,7 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
@@ -68,8 +68,8 @@ const Index = () => {
         </div>
       </AuroraBackground>
 
-      {/* Rest of the content */}
-      <div className="bg-background">
+      {/* Main Content */}
+      <div className="flex-grow bg-background">
         {/* 3D Interactive Section */}
         <div className="max-w-7xl mx-auto px-4 py-24">
           <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
@@ -101,9 +101,44 @@ const Index = () => {
           </Card>
         </div>
 
+        {/* Featured Agents Section */}
+        <div className="max-w-7xl mx-auto px-4 pb-24">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">
+            Featured <span className="text-fuchsia-500">Agents</span>
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
+            <GlareCard className="flex flex-col items-center justify-center">
+              <img 
+                className="h-full w-full absolute inset-0 object-cover"
+                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </GlareCard>
+            <GlareCard className="flex flex-col items-center justify-center">
+              <img 
+                className="h-full w-full absolute inset-0 object-cover"
+                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </GlareCard>
+            <GlareCard className="flex flex-col items-center justify-center">
+              <img 
+                className="h-full w-full absolute inset-0 object-cover"
+                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              />
+            </GlareCard>
+          </div>
+        </div>
+
+        {/* About Me Section */}
+        <div className="max-w-7xl mx-auto px-4 pb-12">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">
+            About <span className="text-fuchsia-500">Me</span>
+          </h2>
+        </div>
+
         {/* AI Consultant Introduction Section */}
         <div className="max-w-7xl mx-auto px-4 pb-24" id="intro-section">
-          <Card className="w-full bg-black/[0.96] relative overflow-hidden transform transition-transform duration-300 hover:scale-105">
+          <Card className="w-full bg-black/[0.96] relative overflow-hidden transform transition-transform duration-300 hover:scale-102">
             <div className="flex flex-col-reverse md:flex-row items-center p-8 gap-8">
               {/* Content Section */}
               <div className="w-full md:w-2/3 relative z-10">
@@ -144,35 +179,28 @@ const Index = () => {
             </div>
           </Card>
         </div>
+      </div>
 
-        {/* Featured Agents Section */}
-        <div className="max-w-7xl mx-auto px-4 pb-24">
-          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">
-            Featured <span className="text-fuchsia-500">Agents</span>
-          </h2>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
-            <GlareCard className="flex flex-col items-center justify-center">
-              <img 
-                className="h-full w-full absolute inset-0 object-cover"
-                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </GlareCard>
-            <GlareCard className="flex flex-col items-center justify-center">
-              <img 
-                className="h-full w-full absolute inset-0 object-cover"
-                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </GlareCard>
-            <GlareCard className="flex flex-col items-center justify-center">
-              <img 
-                className="h-full w-full absolute inset-0 object-cover"
-                src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              />
-            </GlareCard>
+      {/* Footer */}
+      <footer className="bg-black/[0.96] border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-6 py-12">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+            <div className="flex items-center space-x-4">
+              <h3 className="text-xl font-semibold text-fuchsia-500">Terresa Pan</h3>
+              <span className="text-neutral-400">|</span>
+              <span className="text-neutral-400">AI Consultant</span>
+            </div>
+            <div className="flex gap-6 text-neutral-400">
+              <a href="#" className="hover:text-fuchsia-500 transition-colors">LinkedIn</a>
+              <a href="#" className="hover:text-fuchsia-500 transition-colors">Twitter</a>
+              <a href="#" className="hover:text-fuchsia-500 transition-colors">Email</a>
+            </div>
+            <div className="text-neutral-500 text-sm">
+              © {new Date().getFullYear()} All rights reserved.
+            </div>
           </div>
         </div>
-      </div>
+      </footer>
     </div>
   );
 };
