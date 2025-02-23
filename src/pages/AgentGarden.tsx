@@ -2,9 +2,8 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import { AgentCard } from "@/components/ui/agent-card";
 import { cn } from "@/lib/utils";
-import { Link } from "react-router-dom";
-import { StarBorder } from "@/components/ui/star-border";
-import { Linkedin, Github, Youtube } from "lucide-react";
+import { SharedHeader } from "@/components/ui/shared-header";
+import { SharedFooter } from "@/components/ui/shared-footer";
 
 const categories = ["All", "Content Creation", "Marketing Strategy", "Data Analytics", "Decision Making"];
 
@@ -83,21 +82,7 @@ const AgentGarden = () => {
 
   return (
     <div className="min-h-screen bg-background flex flex-col">
-      {/* Header */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-        <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-          <Link to="/" className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">
-            Artful Geek
-          </Link>
-          <div className="flex gap-4">
-            <StarBorder>
-              <Link to="/" className="hover:text-fuchsia-500 transition-colors">
-                Home
-              </Link>
-            </StarBorder>
-          </div>
-        </div>
-      </div>
+      <SharedHeader />
 
       {/* Main Content */}
       <div className="flex-grow">
@@ -159,34 +144,7 @@ const AgentGarden = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-black/[0.96] border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex flex-col items-center md:items-start gap-4">
-              <div className="flex items-center space-x-4">
-                <h3 className="text-xl font-semibold text-fuchsia-500">Terresa Pan</h3>
-                <span className="text-neutral-400">|</span>
-                <span className="text-neutral-400">AI Consultant</span>
-              </div>
-              <div className="flex gap-4">
-                <a href="https://www.linkedin.com/in/terresa-pan-292443245/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
-                  <Linkedin size={20} />
-                </a>
-                <a href="https://github.com/Terresapan?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
-                  <Github size={20} />
-                </a>
-                <a href="https://www.youtube.com/@Terresa_P" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
-                  <Youtube size={20} />
-                </a>
-              </div>
-            </div>
-            <div className="text-neutral-500 text-sm">
-              © {new Date().getFullYear()} All rights reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SharedFooter />
     </div>
   );
 };

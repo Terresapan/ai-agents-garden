@@ -9,9 +9,10 @@ import { GlareCard } from "@/components/ui/glare-card";
 import { ArrowRight } from "lucide-react";
 import { GlobeDemo } from "@/components/ui/code.demo";
 import { Input } from "@/components/ui/input";
-import { GlowingEffect } from "@/components/ui/glowing-effect";
 import { ButtonColorful } from "@/components/ui/button-colorful";
 import { Link } from "react-router-dom";
+import { SharedHeader } from "@/components/ui/shared-header";
+import { SharedFooter } from "@/components/ui/shared-footer";
 import { Linkedin, Github, Youtube } from "lucide-react";
 
 const Index = () => {
@@ -26,64 +27,45 @@ const Index = () => {
 
   return (
     <div className="min-h-screen flex flex-col">
-      {/* Fixed Header */}
-      <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
-        <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-          <Link to="/" className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">
-            Artful Geek
-          </Link>
-          <div className="flex gap-4">
-            <StarBorder>
-              <Link to="/agent-garden" className="hover:text-fuchsia-500 transition-colors">
-                Agent Garden
-              </Link>
-            </StarBorder>
-            <StarBorder onClick={scrollToIntro} className="cursor-pointer">
-              <span className="hover:text-fuchsia-500 transition-colors">
-                Get in Touch
-              </span>
-            </StarBorder>
-          </div>
-        </div>
-      </div>
-
-      {/* Hero Section with Aurora Background */}
-      <AuroraBackground>
-        <div className="h-screen flex items-center justify-center px-4">
-          <motion.div initial={{
-          opacity: 0,
-          y: 20
-        }} animate={{
-          opacity: 1,
-          y: 0
-        }} transition={{
-          duration: 1,
-          ease: "easeOut"
-        }} className="text-center max-w-4xl mx-auto">
-            <div className="w-32 h-32 mx-auto mb-8">
-              <img src="/lovable-uploads/6912a4d2-a538-4eee-a561-ce397129c20e.png" alt="Profile" className="w-full h-full rounded-full object-cover border-2 border-fuchsia-500/20" />
-            </div>
-
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Welcome to Your Next </span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">Amazing</span>
-              <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"> Project</span>
-            </h1>
-            
-            <p className="text-lg md:text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 max-w-2xl mx-auto mb-8">
-              Start building something incredible with modern tools and stunning design.
-              Your journey to creating remarkable applications begins here.
-            </p>
-
-            <RainbowButton onClick={() => window.location.href = '/agent-garden'}>
-              Explore Agent Garden <ArrowRight className="ml-2 h-4 w-4" />
-            </RainbowButton>
-          </motion.div>
-        </div>
-      </AuroraBackground>
+      <SharedHeader />
 
       {/* Main Content */}
       <div className="flex-grow bg-background">
+        {/* Hero Section with Aurora Background */}
+        <AuroraBackground>
+          <div className="h-screen flex items-center justify-center px-4">
+            <motion.div initial={{
+            opacity: 0,
+            y: 20
+          }} animate={{
+            opacity: 1,
+            y: 0
+          }} transition={{
+            duration: 1,
+            ease: "easeOut"
+          }} className="text-center max-w-4xl mx-auto">
+              <div className="w-32 h-32 mx-auto mb-8">
+                <img src="/lovable-uploads/6912a4d2-a538-4eee-a561-ce397129c20e.png" alt="Profile" className="w-full h-full rounded-full object-cover border-2 border-fuchsia-500/20" />
+              </div>
+
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Welcome to Your Next </span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">Amazing</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"> Project</span>
+              </h1>
+              
+              <p className="text-lg md:text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 max-w-2xl mx-auto mb-8">
+                Start building something incredible with modern tools and stunning design.
+                Your journey to creating remarkable applications begins here.
+              </p>
+
+              <RainbowButton onClick={() => window.location.href = '/agent-garden'}>
+                Explore Agent Garden <ArrowRight className="ml-2 h-4 w-4" />
+              </RainbowButton>
+            </motion.div>
+          </div>
+        </AuroraBackground>
+
         {/* 3D Interactive Section */}
         <div className="max-w-7xl mx-auto px-4 py-24">
           <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
@@ -265,34 +247,7 @@ const Index = () => {
         </div>
       </div>
 
-      {/* Footer */}
-      <footer className="bg-black/[0.96] border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-6">
-            <div className="flex items-center space-x-4">
-              <h3 className="text-xl font-semibold text-fuchsia-500">Terresa Pan</h3>
-              <span className="text-neutral-400">|</span>
-              <span className="text-neutral-400">AI Consultant</span>
-            </div>
-            
-            <div className="flex gap-4">
-              <a href="https://www.linkedin.com/in/terresa-pan-292443245/" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
-                <Linkedin size={20} />
-              </a>
-              <a href="https://github.com/Terresapan?tab=repositories" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
-                <Github size={20} />
-              </a>
-              <a href="https://www.youtube.com/@Terresa_P" target="_blank" rel="noopener noreferrer" className="text-neutral-400 hover:text-fuchsia-500 transition-colors">
-                <Youtube size={20} />
-              </a>
-            </div>
-
-            <div className="text-neutral-500 text-sm">
-              © {new Date().getFullYear()} All rights reserved.
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SharedFooter />
     </div>
   );
 };
