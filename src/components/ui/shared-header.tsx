@@ -28,11 +28,11 @@ export const SharedHeader = () => {
                 <stop offset="100%" stopColor="#3B99FC" />
               </linearGradient>
             </defs>
-            <g stroke="url(#flowerGradient)" strokeWidth="2" fill="none">
-              <path d="M100 15 C130 35, 140 80, 100 100 C60 80, 70 35, 100 15"/>
-              <path d="M185 100 C165 130, 120 140, 100 100 C120 60, 165 70, 185 100"/>
-              <path d="M100 185 C70 165, 60 120, 100 100 C140 120, 130 165, 100 185"/>
-              <path d="M15 100 C35 70, 80 60, 100 100 C80 140, 35 130, 15 100"/>
+            <g fill="url(#flowerGradient)" stroke="none">
+              <path d="M100 15 C130 35, 140 80, 100 100 C60 80, 70 35, 100 15 Z"/>
+              <path d="M185 100 C165 130, 120 140, 100 100 C120 60, 165 70, 185 100 Z"/>
+              <path d="M100 185 C70 165, 60 120, 100 100 C140 120, 130 165, 100 185 Z"/>
+              <path d="M15 100 C35 70, 80 60, 100 100 C80 140, 35 130, 15 100 Z"/>
               <circle cx="100" cy="100" r="8"/>
             </g>
           </svg>
