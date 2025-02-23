@@ -109,9 +109,9 @@ const Index = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
             <div className="relative w-full">
-              <GlareCard className="flex flex-col items-center justify-center group">
-                <img className="h-full w-full absolute inset-0 object-cover transition-opacity group-hover:opacity-50" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Agent"/>
-                <div className="relative z-10 p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <GlareCard className="flex flex-col items-center justify-center">
+                <img className="h-full w-full absolute inset-0 object-cover opacity-50" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Agent"/>
+                <div className="relative z-10 p-6 text-center">
                   <h3 className="text-xl font-bold mb-2 text-white">Data Whisperer</h3>
                   <p className="text-sm text-gray-200">Your AI-powered data scientist</p>
                 </div>
@@ -119,9 +119,9 @@ const Index = () => {
             </div>
             
             <div className="relative w-full">
-              <GlareCard className="flex flex-col items-center justify-center group">
-                <img className="h-full w-full absolute inset-0 object-cover transition-opacity group-hover:opacity-50" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Agent"/>
-                <div className="relative z-10 p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <GlareCard className="flex flex-col items-center justify-center">
+                <img className="h-full w-full absolute inset-0 object-cover opacity-50" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Agent"/>
+                <div className="relative z-10 p-6 text-center">
                   <h3 className="text-xl font-bold mb-2 text-white">CalendlySocial</h3>
                   <p className="text-sm text-gray-200">Automate your social media calendar with AI-powered scheduling</p>
                 </div>
@@ -129,9 +129,9 @@ const Index = () => {
             </div>
             
             <div className="relative w-full">
-              <GlareCard className="flex flex-col items-center justify-center group">
-                <img className="h-full w-full absolute inset-0 object-cover transition-opacity group-hover:opacity-50" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Agent"/>
-                <div className="relative z-10 p-6 text-center opacity-0 group-hover:opacity-100 transition-opacity">
+              <GlareCard className="flex flex-col items-center justify-center">
+                <img className="h-full w-full absolute inset-0 object-cover opacity-50" src="https://images.unsplash.com/photo-1512618831669-521d4b375f5d?q=80&w=3388&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="AI Agent"/>
+                <div className="relative z-10 p-6 text-center">
                   <h3 className="text-xl font-bold mb-2 text-white">Debating Arena</h3>
                   <p className="text-sm text-gray-200">Challenge your ideas with AI-powered debate</p>
                 </div>
