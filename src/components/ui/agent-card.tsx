@@ -6,14 +6,18 @@ interface AgentCardProps {
   description: string;
   category: string;
   imagePath: string;
+  link: string;
   className?: string;
 }
 
-const AgentCard = ({ title, description, category, imagePath, className }: AgentCardProps) => {
+const AgentCard = ({ title, description, category, imagePath, link, className }: AgentCardProps) => {
   return (
-    <div 
+    <a 
+      href={link}
+      target="_blank"
+      rel="noopener noreferrer"
       className={cn(
-        "group relative rounded-xl overflow-hidden",
+        "group relative rounded-xl overflow-hidden block",
         "transition-all duration-300 hover:scale-[1.02]",
         className
       )}
@@ -37,7 +41,7 @@ const AgentCard = ({ title, description, category, imagePath, className }: Agent
           <p className="text-sm text-white/90">{description}</p>
         </div>
       </div>
-    </div>
+    </a>
   );
 };
 
