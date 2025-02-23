@@ -22,13 +22,17 @@ const Index = () => {
       {/* Fixed Header */}
       <div className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b">
         <div className="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
-          <h2 className="text-xl font-semibold text-fuchsia-500">Terresa Pan</h2>
+          <h2 className="text-xl font-semibold bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">Terresa Pan</h2>
           <div className="flex gap-4">
             <StarBorder>
-              Agents
+              <span className="hover:text-fuchsia-500 transition-colors">
+                Agents
+              </span>
             </StarBorder>
             <StarBorder onClick={scrollToIntro} className="cursor-pointer">
-              Get in Touch
+              <span className="hover:text-fuchsia-500 transition-colors">
+                Get in Touch
+              </span>
             </StarBorder>
           </div>
         </div>
@@ -53,7 +57,7 @@ const Index = () => {
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Welcome to Your Next </span>
-              <span className="text-fuchsia-500">Amazing</span>
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">Amazing</span>
               <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"> Project</span>
             </h1>
             
