@@ -35,13 +35,12 @@ const Index = () => {
             transition={{ duration: 1, ease: "easeOut" }}
             className="text-center max-w-4xl mx-auto"
           >
-            <div className="w-48 h-48 mx-auto mb-8 relative">
+            <div className="w-32 h-32 mx-auto mb-8">
               <img 
                 src="/lovable-uploads/6912a4d2-a538-4eee-a561-ce397129c20e.png"
                 alt="Profile"
-                className="w-full h-full rounded-full object-cover border-4 border-fuchsia-500/20"
+                className="w-full h-full rounded-full object-cover border-2 border-fuchsia-500/20"
               />
-              <div className="absolute inset-0 rounded-full bg-fuchsia-500/10 backdrop-blur-sm"></div>
             </div>
 
             <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold dark:text-white mb-6">
