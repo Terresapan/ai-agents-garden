@@ -229,17 +229,9 @@ const Index = () => {
 
               {/* Contact form on the right */}
               <div className="relative rounded-lg">
-                <div className="relative rounded-lg p-8 border border-white/10 bg-black/[0.96] overflow-hidden">
-                  <GlowingEffect 
-                    disabled={false}
-                    glow={true}
-                    spread={60}
-                    blur={20}
-                    borderWidth={2}
-                    proximity={100}
-                    inactiveZone={0.4}
-                    movementDuration={2}
-                  />
+                <div className="relative rounded-lg p-8 border border-white/10 bg-black/[0.96] 
+                              transition-all duration-300 hover:shadow-[0_0_20px_rgba(217,70,239,0.5),0_0_40px_rgba(30,174,219,0.3)] 
+                              hover:border-fuchsia-500/50">
                   <h2 className="text-3xl font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 text-center">
                     Subscribe to Newsletters
                   </h2>
