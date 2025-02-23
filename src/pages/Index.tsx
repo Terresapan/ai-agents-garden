@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { useEffect, useLocation } from "react";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { RainbowButton } from "@/components/ui/rainbow-button";
 import { StarBorder } from "@/components/ui/star-border";
@@ -16,14 +17,18 @@ import { SharedFooter } from "@/components/ui/shared-footer";
 import { Linkedin, Github, Youtube } from "lucide-react";
 
 const Index = () => {
-  const scrollToIntro = () => {
-    const introSection = document.getElementById('intro-section');
-    if (introSection) {
-      introSection.scrollIntoView({
-        behavior: 'smooth'
-      });
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.state?.scrollToIntro) {
+      const introSection = document.getElementById('intro-section');
+      if (introSection) {
+        introSection.scrollIntoView({ behavior: 'smooth' });
+      }
+      // Clear the state after scrolling
+      window.history.replaceState({}, document.title);
     }
-  };
+  }, [location]);
 
   return (
     <div className="min-h-screen flex flex-col">
