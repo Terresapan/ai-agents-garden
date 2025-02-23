@@ -16,20 +16,21 @@ import { ButtonColorful } from "@/components/ui/button-colorful";
 import { Link } from "react-router-dom";
 import { SharedHeader } from "@/components/ui/shared-header";
 import { SharedFooter } from "@/components/ui/shared-footer";
+
 const Index = () => {
   const location = useLocation();
+
   useEffect(() => {
     if (location.state?.scrollToIntro) {
       const introSection = document.getElementById('intro-section');
       if (introSection) {
-        introSection.scrollIntoView({
-          behavior: 'smooth'
-        });
+        introSection.scrollIntoView({ behavior: 'smooth' });
       }
       // Clear the state after scrolling
       window.history.replaceState({}, document.title);
     }
   }, [location]);
+
   return <div className="min-h-screen flex flex-col">
       <SharedHeader />
 
@@ -53,14 +54,12 @@ const Index = () => {
               </div>
 
               <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6">
-                <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Welcome to Your Next </span>
-                <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">Amazing</span>
-                <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400"> Project</span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">Welcome to my Next-Gen </span>
+                <span className="bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-500 to-blue-500">Agent Garden</span>
               </h1>
               
               <p className="text-lg md:text-xl bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 max-w-2xl mx-auto mb-8">
-                Start building something incredible with modern tools and stunning design.
-                Your journey to creating remarkable applications begins here.
+                Build Something Incredible with AI. Your Journey to AI-Powered Success Begins Here.
               </p>
 
               <RainbowButton onClick={() => window.location.href = '/agent-garden'}>
@@ -229,4 +228,5 @@ const Index = () => {
       <SharedFooter />
     </div>;
 };
+
 export default Index;
