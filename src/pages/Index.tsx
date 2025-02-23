@@ -17,52 +17,47 @@ const Index = () => {
           <h2 className="text-xl font-semibold text-fuchsia-500">Terresa Pan</h2>
           <div className="flex gap-4">
             <StarBorder>
-              Work Experience
+              Agents
             </StarBorder>
             <StarBorder>
-              Get in Touch
+              Blogs
             </StarBorder>
           </div>
         </div>
       </div>
 
-      {/* Main content with top padding to account for fixed header */}
-      <motion.div initial={{
-        opacity: 0,
-        y: 20
-      }} animate={{
-        opacity: 1,
-        y: 0
-      }} transition={{
-        duration: 1,
-        ease: "easeOut"
-      }} className="relative flex flex-col gap-6 items-center justify-center px-4 max-w-4xl mx-auto text-center pt-24">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold dark:text-white">
-          Welcome to Your Next{" "}
-          <span className="text-fuchsia-500">Amazing</span>{" "}
-          Project
-        </h1>
-        
-        <p className="text-lg md:text-xl dark:text-neutral-200 max-w-2xl">
-          Start building something incredible with modern tools and stunning design.
-          Your journey to creating remarkable applications begins here.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 mt-8">
-          <RainbowButton>
-            Get Started <ArrowRight className="ml-2 h-4 w-4" />
-          </RainbowButton>
+      {/* Main content with adjusted height and spacing */}
+      <motion.div 
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="relative min-h-screen flex flex-col gap-8 px-4 max-w-7xl mx-auto"
+      >
+        {/* Hero section with proper vertical spacing */}
+        <div className="flex flex-col items-center justify-center text-center pt-32 pb-16">
+          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold dark:text-white mb-6">
+            Welcome to Your Next{" "}
+            <span className="text-fuchsia-500">Amazing</span>{" "}
+            Project
+          </h1>
           
-          <StarBorder>
-            Learn More
-          </StarBorder>
+          <p className="text-lg md:text-xl dark:text-neutral-200 max-w-2xl mb-8">
+            Start building something incredible with modern tools and stunning design.
+            Your journey to creating remarkable applications begins here.
+          </p>
+
+          <div className="flex justify-center">
+            <RainbowButton>
+              Get Started <ArrowRight className="ml-2 h-4 w-4" />
+            </RainbowButton>
+          </div>
         </div>
 
-        <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden mt-16">
+        {/* 3D Interactive Section */}
+        <Card className="w-full h-[500px] bg-black/[0.96] relative overflow-hidden">
           <Spotlight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
           
           <div className="flex h-full flex-col md:flex-row">
-            {/* Left content */}
             <div className="flex-1 p-8 relative z-10 flex flex-col justify-center">
               <h1 className="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400">
                 Interactive 3D
@@ -73,20 +68,19 @@ const Index = () => {
               </p>
             </div>
 
-            {/* Right content */}
             <div className="flex-1 relative">
               <SplineScene scene="https://prod.spline.design/kZDDjO5HuC9GJUM2/scene.splinecode" className="w-full h-full" />
             </div>
           </div>
         </Card>
 
-        {/* Featured Agents Section */}
-        <div className="w-full mt-24">
-          <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center dark:text-white">
+        {/* Featured Agents Section with increased spacing */}
+        <div className="w-full py-24">
+          <h2 className="text-3xl md:text-4xl font-bold mb-16 text-center dark:text-white">
             Featured <span className="text-fuchsia-500">Agents</span>
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto px-6">
             <GlareCard className="flex flex-col items-center justify-center">
               <img 
                 className="h-full w-full absolute inset-0 object-cover"
