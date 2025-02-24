@@ -52,6 +52,18 @@ export const GlareCard = ({
     backgroundBlendMode: "hue, hue, hue, overlay",
   };
 
+  const updateStyles = () => {
+    if (refElement.current) {
+      const { background, rotate, glare } = state.current;
+      refElement.current?.style.setProperty("--m-x", `${glare.x}%`);
+      refElement.current?.style.setProperty("--m-y", `${glare.y}%`);
+      refElement.current?.style.setProperty("--r-x", `${rotate.x * 0.2}deg`); // Reduced rotation effect
+      refElement.current?.style.setProperty("--r-y", `${rotate.y * 0.2}deg`); // Reduced rotation effect
+      refElement.current?.style.setProperty("--bg-x", `${background.x}%`);
+      refElement.current?.style.setProperty("--bg-y", `${background.y}%`);
+    }
+  };
+
   return (
     <div
       style={containerStyle}
