@@ -38,12 +38,11 @@ export const SharedHeader = () => {
           </svg>
         </Link>
         <div className="flex items-center gap-6">
-          <ButtonColorful 
-            asChild
-            label="Agent Garden"
-          >
-            <Link to="/agent-garden">Agent Garden</Link>
-          </ButtonColorful>
+          <Link to="/agent-garden">
+            <ButtonColorful>
+              Agent Garden
+            </ButtonColorful>
+          </Link>
           <Button 
             variant="outline"
             className="border-fuchsia-500 text-fuchsia-500 hover:bg-fuchsia-500/10"
