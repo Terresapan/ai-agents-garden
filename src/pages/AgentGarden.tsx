@@ -86,6 +86,14 @@ const agents = [
     link: "https://advancedmatcher.streamlit.app/",
   },
   {
+    title: "Client Success Story Teller",
+    description:
+      "Generate client success stories and automatically save to Google Doc",
+    category: "Content Creation",
+    imagePath: "/lovable-uploads/IMG_0377.jpg",
+    link: "https://clientstoryteller.streamlit.app/",
+  },
+  {
     title: "AI Socail Media Listener",
     description: "Monitor social media sentiment with AI-driven insights",
     category: "Data Analytics",
