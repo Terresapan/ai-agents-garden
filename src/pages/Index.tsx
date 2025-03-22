@@ -202,23 +202,23 @@ const Index = () => {
 
             <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
               <a
-                href="https://calenderly.streamlit.app/"
+                href="https://advancedmatcher.streamlit.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <GlareCard className="flex flex-col items-center justify-center">
                   <img
                     className="h-full w-full absolute inset-0 object-cover opacity-50"
-                    src="/lovable-uploads/c9f4c6a5-97e2-4104-8e77-6c195914e5c4.png"
+                    src="/lovable-uploads/IMG_0412.JPG"
                     alt="CalendlySocial"
                   />
                   <div className="relative z-10 p-6 text-center">
                     <h3 className="text-xl font-bold mb-2 text-white">
-                      CalendlySocial
+                      Interactive SmartMatcher
                     </h3>
                     <p className="text-sm text-gray-200">
-                      Streamline your social media calendar with AI-driven
-                      scheduling
+                      Mactchmaking consultants integrated with Human-in-the-Loop
+                      feature
                     </p>
                   </div>
                 </GlareCard>

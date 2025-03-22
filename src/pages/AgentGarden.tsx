@@ -94,6 +94,13 @@ const agents = [
     link: "https://clientstoryteller.streamlit.app/",
   },
   {
+    title: "Interactive SmartMatcher",
+    description: "Mactchmaking consultants with Human-in-the-Loop feature",
+    category: "Decision Making",
+    imagePath: "/lovable-uploads/IMG_0412.JPG",
+    link: "https://advancedmatcher.streamlit.app/",
+  },
+  {
     title: "AI Socail Media Listener",
     description: "Monitor social media sentiment with AI-driven insights",
     category: "Data Analytics",
