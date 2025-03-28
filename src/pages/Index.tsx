@@ -178,30 +178,6 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-16 justify-items-center max-w-6xl mx-auto">
             <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
               <a
-                href="https://mrdatawhisperer.streamlit.app/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <GlareCard className="flex flex-col items-center justify-center">
-                  <img
-                    className="h-full w-full absolute inset-0 object-cover opacity-50"
-                    src="/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
-                    alt="Data Whisperer"
-                  />
-                  <div className="relative z-10 p-6 text-center">
-                    <h3 className="text-xl font-bold mb-2 text-white">
-                      Data Whisperer
-                    </h3>
-                    <p className="text-sm text-gray-200">
-                      Unlock data insights with AI-powered analysis
-                    </p>
-                  </div>
-                </GlareCard>
-              </a>
-            </div>
-
-            <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
-              <a
                 href="https://advancedmatcher.streamlit.app/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -227,22 +203,46 @@ const Index = () => {
 
             <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
               <a
-                href="https://debating-arena.streamlit.app/"
+                href="https://mrdatawhisperer.streamlit.app/"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <GlareCard className="flex flex-col items-center justify-center">
                   <img
                     className="h-full w-full absolute inset-0 object-cover opacity-50"
-                    src="/lovable-uploads/b5a40246-1a1f-413e-a3e7-a5f46910aabc.png"
+                    src="/lovable-uploads/8fd0ee35-491c-40c7-8e4a-028bdc2ea3ad.png"
+                    alt="Data Whisperer"
+                  />
+                  <div className="relative z-10 p-6 text-center">
+                    <h3 className="text-xl font-bold mb-2 text-white">
+                      Data Whisperer
+                    </h3>
+                    <p className="text-sm text-gray-200">
+                      Unlock data insights with AI-powered analysis
+                    </p>
+                  </div>
+                </GlareCard>
+              </a>
+            </div>
+
+            <div className="relative w-full transform transition-transform duration-300 hover:-translate-y-1">
+              <a
+                href="https://pantheondiscourseengine.streamlit.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <GlareCard className="flex flex-col items-center justify-center">
+                  <img
+                    className="h-full w-full absolute inset-0 object-cover opacity-50"
+                    src="/lovable-uploads/IMG_0413.JPG"
                     alt="Debating Arena"
                   />
                   <div className="relative z-10 p-6 text-center">
                     <h3 className="text-xl font-bold mb-2 text-white">
-                      Debating Arena
+                      Pantheon Discourse Engine
                     </h3>
                     <p className="text-sm text-gray-200">
-                      Sharpen your ideas with AI-powered debates
+                      Where AI Titans Clash, Insights Emerge
                     </p>
                   </div>
                 </GlareCard>
