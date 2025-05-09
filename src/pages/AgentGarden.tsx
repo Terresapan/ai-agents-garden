@@ -11,6 +11,7 @@ const categories = [
   "Marketing Strategy",
   "Data Analytics",
   "Decision Making",
+  "Deep Research",
 ];
 
 const agents = [
@@ -108,11 +109,11 @@ const agents = [
     link: "https://pantheondiscourseengine.streamlit.app/",
   },
   {
-    title: "AI Socail Media Listener",
-    description: "Monitor social media sentiment with AI-driven insights",
-    category: "Data Analytics",
+    title: "Grand Code Agent",
+    description: "a SmolAgents showcasing the power of the Code Agent",
+    category: "Deep Research",
     imagePath: "/lovable-uploads/IMG_0372.JPG",
-    link: "#",
+    link: "https://huggingface.co/spaces/Terresa/Grand_Code_Agent",
   },
   {
     title: "Market Horizon Explorer",
